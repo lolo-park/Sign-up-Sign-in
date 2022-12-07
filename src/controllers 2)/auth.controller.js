@@ -1,4 +1,6 @@
-const authService = require('../services/auth.service');
+const authService = require("../services/auth.service");
+//presentation(controlle)가 business(service)를 의존하고 있는!!
+//service 의 auth.service를 불러와서 의존하고 있는..
 
 const signUp = async (req, res) => {
   try {
@@ -8,7 +10,7 @@ const signUp = async (req, res) => {
 
     res.status(201).end();
   } catch (err) {
-    res.status(err.statusCode || 400).json({ message: err.message });
+    ~res.status(err.statusCode || 400).json({ message: err.message });
   }
 };
 

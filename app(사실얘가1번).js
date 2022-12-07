@@ -12,12 +12,21 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("combined"));
 
-app.use(routes);
+app.use(routes); //route로 먼저 가라 !!!!!! app.us(route파일 발동)
 
 const startServer = async () => {
   const PORT = process.env.PORT;
 
   await AppDataSource.initialize();
+  try {
+    ajdf;lkjflaskj
+  } catch (err) flsadkjfasdkljhf {
+
+    app.listen(PORT, () => {
+      console.log(`Listening on Port ${PORT}`);
+    });  
+    
+  }
 
   app.listen(PORT, () => {
     console.log(`Listening on Port ${PORT}`);
